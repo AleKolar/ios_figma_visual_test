@@ -1,0 +1,66 @@
+execution:
+  # demo — запускаем демонстрационный visual regression
+  # appium — будущий режим с реальным iOS runtime через Appium
+  mode: "demo"
+
+  # В demo для screen_2 специально добавляем лишний элемент,
+  # чтобы тест продемонстрировал обнаружение визуального дефекта.
+  inject_demo_defect: true
+
+
+visual:
+  # Минимальный SSIM для определения соответствия.
+  ssim_threshold: 0.98
+
+  # Максимально допустимый процент отличающихся пикселей.
+  max_diff_percent: 0.5
+
+  # Минимальная разница яркости пикселя,
+  # которую считаем значимым изменением.
+  pixel_diff_threshold: 25
+
+  # Минимальная площадь области отличия,
+  # которую учитываем при поиске дефекта.
+  min_component_area: 30
+
+  # Actual приводим к размеру Figma reference.
+  resize_actual_to_reference: true
+
+  # В demo ничего не обрезаем.
+  # Для реального iOS позже можно использовать,
+  # если status bar / home indicator отсутствуют в Figma.
+  crop_actual:
+    top_percent: 0.0
+    bottom_percent: 0.0
+
+
+paths:
+  # Эталонные PNG, экспортированные из Figma.
+  reference_images: "reference_images"
+
+  # Сюда сохраняются simulated/runtime screenshots.
+  actual_images: "actual_images"
+
+  # Сюда сохраняются изображения различий.
+  diff_images: "diff_images"
+
+  # Сюда сохраняются HTML и JSON отчёты.
+  reports: "reports"
+
+
+screens:
+
+  screen_1:
+    # Первый эталон из Figma.
+    reference: "screen_1.png"
+
+    # На первом экране дефекта нет.
+    demo_defect: false
+
+
+  screen_2:
+    # Второй эталон из Figma.
+    reference: "screen_2.png"
+
+    # Для демонстрации создаём лишний элемент.
+    demo_defect: true

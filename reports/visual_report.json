@@ -1,0 +1,49 @@
+[
+    {
+        "screen": "screen_1",
+        "status": "PASS",
+        "similarity": 1.0,
+        "diff_percent": 0.0,
+        "expected_size": [
+            1187,
+            2564
+        ],
+        "actual_size": [
+            1187,
+            2564
+        ],
+        "bounding_boxes": [],
+        "reference_path": "C:\\Users\\User\\pythonProject\\ios_figma_visual_test\\reference_images\\screen_1.png",
+        "actual_path": "C:\\Users\\User\\pythonProject\\ios_figma_visual_test\\actual_images\\screen_1.png",
+        "diff_image_path": "C:\\Users\\User\\pythonProject\\ios_figma_visual_test\\diff_images\\screen_1_diff.png",
+        "overlay_image_path": "C:\\Users\\User\\pythonProject\\ios_figma_visual_test\\diff_images\\screen_1_overlay.png",
+        "bug_report_path": null
+    },
+    {
+        "screen": "screen_2",
+        "status": "FAIL",
+        "similarity": 0.98967,
+        "diff_percent": 1.69994,
+        "expected_size": [
+            1179,
+            2556
+        ],
+        "actual_size": [
+            1179,
+            2556
+        ],
+        "bounding_boxes": [
+            [
+                885,
+                2087,
+                238,
+                216
+            ]
+        ],
+        "reference_path": "C:\\Users\\User\\pythonProject\\ios_figma_visual_test\\reference_images\\screen_2.png",
+        "actual_path": "C:\\Users\\User\\pythonProject\\ios_figma_visual_test\\actual_images\\screen_2.png",
+        "diff_image_path": "C:\\Users\\User\\pythonProject\\ios_figma_visual_test\\diff_images\\screen_2_diff.png",
+        "overlay_image_path": "C:\\Users\\User\\pythonProject\\ios_figma_visual_test\\diff_images\\screen_2_overlay.png",
+        "bug_report_path": "C:\\Users\\User\\pythonProject\\ios_figma_visual_test\\reports\\bugs\\BUG-screen_2.md"
+    }
+]
